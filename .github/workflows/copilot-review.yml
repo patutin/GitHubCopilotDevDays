@@ -1,0 +1,24 @@
+name: Copilot CLI Demo
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  copilot-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Copilot CLI
+        run: curl -fsSL https://gh.io/copilot-install | sudo bash
+
+      - name: Run Copilot CLI non-interactively
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          copilot --yolo --agent ultra-review -p "Review PR #${PR_NUMBER} at ${PR_URL}"

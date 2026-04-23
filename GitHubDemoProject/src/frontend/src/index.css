@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+h1 {
+  @apply text-3xl font-bold text-amber-600;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
+}
+a {
+  @apply text-amber-600 underline;
+}
+
+.subtitle {
+  @apply text-highContrastText;
+}
+
+.font-serif {
+  font-family: 'Merriweather', serif;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #FCD34D;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #4B5563;
+}
+
+.vintage-filter {
+  filter: sepia(0.6);
+}
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.plane-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotate 20s linear infinite;
+}
+
+.rotate-fast {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-gentle {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.pulse-gentle {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.drift-slow {
+  animation: drift 5s ease-in-out infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.hover-tilt:hover {
+  animation: tilt 0.6s ease-in-out alternate infinite;
+}
+
+@keyframes flyAway {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(20vw) translateY(-10vh) scale(1.4) rotate(-20deg);
+  }
+  50% {
+    transform: translateX(40vw) translateY(10vh) scale(1.8) rotate(20deg);
+  }
+  75% {
+    transform: translateX(60vw) translateY(-20vh) scale(2.2) rotate(-20deg);
+  }
+  100% {
+    transform: translateX(100vw) translateY(-30vh) scale(2.6) rotate(20deg);
+  }
+}
+
+.flying {
+  animation: flyAway 2s forwards;
+}
