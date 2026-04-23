@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AviationApi", "AviationApi\AviationApi.csproj", "{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvationApi.Tests", "AvationApi.Tests\AvationApi.Tests.csproj", "{59893CB5-119D-4E21-8E47-9B250CD1C2E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AviationApi", "AviationApi", "{0998BA34-0CB9-463C-97FB-C6091C3799CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59893CB5-119D-4E21-8E47-9B250CD1C2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59893CB5-119D-4E21-8E47-9B250CD1C2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59893CB5-119D-4E21-8E47-9B250CD1C2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59893CB5-119D-4E21-8E47-9B250CD1C2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F5FD29D-F37D-4DF9-98CF-AB853CB58F23} = {0998BA34-0CB9-463C-97FB-C6091C3799CA}
+	EndGlobalSection
+EndGlobal

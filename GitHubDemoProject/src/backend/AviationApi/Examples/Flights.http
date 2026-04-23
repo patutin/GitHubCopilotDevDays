@@ -1,0 +1,35 @@
+### 
+
+POST http://localhost:1903/flights HTTP/1.1
+content-type: application/json
+
+{
+    "id": 4,
+    "flightNumber": "WB004",
+    "origin": "Fort Myer, VA",
+    "destination": "Fort Myer, VA",
+    "departureTime": "1908-09-17T10:35:00",
+    "arrivalTime": "1908-09-17T10:47:00",
+    "status": 0,
+    "fuelRange": 100,
+    "fuelTankLeak": false,
+    "flightLogSignature": "17091908-DEP-ARR-WB004",
+    "aerobaticSequenceSignature": "L4B-R3A-H2C-T2E-S1D"
+}
+
+###
+
+POST http://localhost:1903/flights/3/takeFlight/75 HTTP/1.1
+content-type: application/json
+
+###
+
+POST http://localhost:1903/flights/1/lightningStrike HTTP/1.1
+content-type: application/json
+
+###
+
+POST http://localhost:1903/flights/3/calculateAerodynamics HTTP/1.1
+content-type: application/json
+
+###
