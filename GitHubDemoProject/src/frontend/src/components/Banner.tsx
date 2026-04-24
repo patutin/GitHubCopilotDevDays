@@ -3,27 +3,26 @@ import { Airplane } from "./Airplane";
 
 const Banner: React.FC = () => {
   return (
-    <div className="relative p-28 sm:px-32 lg:px-36 vintage-filter bg-amber-600 overflow-hidden flex items-center justify-start">
+    <div className="relative p-28 sm:px-32 lg:px-36 bg-u-black overflow-hidden flex items-center justify-start border-b border-u-green-deep">
       <div className="text-left">
-        <h1 className="text-5xl leading-none font-bold text-amber-100 sm:text-6xl sm:leading-tight">
-          Dawn of Aviation
+        <h1 className="text-5xl leading-none font-bold sm:text-6xl sm:leading-tight font-heading">
+          <span className="text-u-white">Dawn of </span>
+          <span className="text-u-green">Aviation</span>
         </h1>
-        <p className="text-xs subtitle ">
-          Journey back to where it all began with the avation historic
+        <p className="text-base subtitle text-u-muted mt-2">
+          Journey back to where it all began with the aviation historic
           flights.
         </p>
       </div>
       <div className="absolute top-10 left-10">
-        <div className="circle shadow-lg pulse-gentle"></div>{" "}
-        {/* Sun with pulsing effect */}
+        <div className="circle shadow-lg pulse-gentle"></div>
       </div>
       <div className="absolute bottom-20 right-20">
-        <div className="triangle drift-slow"></div>{" "}
-        {/* Triangle with drifting effect */}
+        <div className="triangle drift-slow"></div>
       </div>
       <div className="absolute left-16 bottom-8">
         <div className="absolute bottom-0 left-16">
-          <PropellerSVG /> {/* Propeller with shadow */}
+          <PropellerSVG />
         </div>
         <div className="absolute bottom-0 left-0 mt-8 float-gentle">
           <Airplane />
@@ -43,7 +42,7 @@ const PropellerSVG = () => (
   >
     <path
       d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"
-      fill="#D1D5DB"
+      fill="#5EEC83"
     />
   </svg>
 );
