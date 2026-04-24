@@ -1,31 +1,40 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+body {
+  font-family: 'Aptos', 'Arial', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 h1 {
-  @apply text-3xl font-bold text-amber-600;
+  @apply text-3xl font-bold text-u-white;
 }
 h2 {
-  @apply text-2xl;
+  @apply text-2xl text-u-white;
 }
 h3 {
-  @apply text-xl;
+  @apply text-xl text-u-white;
 }
 a {
-  @apply text-amber-600 underline;
+  @apply text-u-link underline;
+}
+a:visited {
+  @apply text-u-teal;
 }
 
 .subtitle {
-  @apply text-highContrastText;
+  @apply text-u-muted;
 }
 
 .font-serif {
-  font-family: 'Merriweather', serif;
+  font-family: 'Aptos', 'Arial', sans-serif;
 }
 
 .circle {
   width: 100px;
   height: 100px;
-  background-color: #FCD34D;
+  background-color: #5EEC83;
   border-radius: 50%;
 }
 
@@ -34,11 +43,11 @@ a {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid #4B5563;
+  border-bottom: 100px solid #232824;
 }
 
 .vintage-filter {
-  filter: sepia(0.6);
+  filter: none;
 }
 
 .planes-grid {
@@ -49,11 +58,11 @@ a {
 }
 
 .plane-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #232824;
+  border: 1px solid #087827;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(94, 236, 131, 0.08);
 }
 
 @keyframes rotate {

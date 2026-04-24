@@ -28,14 +28,17 @@ const PlaneList: React.FC<PlaneListProps> = (props: PlaneListProps) => {
 
   return (
     <div className="planes-list-container">
-      <h2 className="text-xl font-bold mb-4">Aviation Collection</h2>
+      <h2 className="text-xl font-bold mb-4 font-heading">
+        <span className="text-u-white">Aviation </span>
+        <span className="text-u-green">Collection</span>
+      </h2>
       
       <ul className="space-y-4">
         {planes.map((plane) => (
           <li 
             key={plane.id}
             onClick={(e) => handleClick(plane.id, e)}
-            className="flex items-center p-4 border border-gray-200 rounded shadow-sm hover:shadow-md cursor-pointer transition-shadow"
+            className="flex items-center p-4 border border-u-green-deep/30 rounded-lg bg-u-surface hover:bg-u-surface/80 hover:border-u-green/50 cursor-pointer transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-u-green/5"
           >
             <img
               src="./plane.png"
@@ -43,8 +46,8 @@ const PlaneList: React.FC<PlaneListProps> = (props: PlaneListProps) => {
               className="w-12 h-12 mr-4"
             />
             <div>
-              <div className="font-medium">{plane.name}</div>
-              <div className="text-sm text-gray-600">Year: {plane.year}</div>
+              <div className="font-medium text-u-white font-body">{plane.name}</div>
+              <div className="text-sm text-u-green-md">Year: {plane.year}</div>
             </div>
           </li>
         ))}
