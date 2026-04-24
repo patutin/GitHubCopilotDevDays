@@ -63,15 +63,16 @@ const PlaneDetail = () => {
   return (
     <PageContent>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-amber-900">
-          {planeDetails.name}
+        <h2 className="text-3xl font-bold font-heading">
+          <span className="text-u-white">{planeDetails.name}</span>
         </h2>
-        <p className="text-xl text-amber-800">{planeDetails.year}</p>
-        <p className="mt-4 mb-8 text-amber-700">
+        <p className="text-xl text-u-green">{planeDetails.year}</p>
+        <p className="mt-4 mb-8 text-u-muted">
           {planeDetails.description}
         </p>
-        <h3 className="text-2xl text-amber-900 mb-4">
-          Flight Details
+        <h3 className="text-2xl text-u-white mb-4 font-heading">
+          <span>Flight </span>
+          <span className="text-u-green">Details</span>
         </h3>
         <div className="relative w-2/3">
           <Card>

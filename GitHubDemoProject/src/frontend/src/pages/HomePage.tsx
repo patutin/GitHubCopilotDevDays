@@ -28,7 +28,7 @@ function HomePage() {
   ];
 
   return (
-    <div>
+    <div className="bg-u-black min-h-screen">
       <Banner />
       <PageContent>
         <PlaneList planes={planes} />

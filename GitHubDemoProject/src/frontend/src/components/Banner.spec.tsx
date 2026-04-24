@@ -6,6 +6,8 @@ describe('Banner', () => {
   it('should render banner with title', () => {
     render(<Banner />);
     
-    expect(screen.getByText('Dawn of Aviation')).toBeInTheDocument();
+    expect(screen.getByText((_content, element) => {
+      return element?.tagName === 'H1' && element?.textContent === 'Dawn of Aviation';
+    })).toBeInTheDocument();
   });
 });
